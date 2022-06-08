@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  nginx:
+    image: nginx:latest
+#    containter_name: hugo-test-compose
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /home/mironov/letsencrypt/:/etc/letsencrypt/
+      - /home/mironov/dev_repo/www/hugo:/var/www/hugo/
+      - /home/mironov/dev_repo/sites-availible/default:/etc/nginx/sites-availible/default
+      - /home/mironov/dev_repo/nginx.conf:/etc/nginx/nginx.conf
