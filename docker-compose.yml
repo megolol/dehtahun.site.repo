@@ -9,7 +9,7 @@ services:
       - 443:443
     volumes:
       - /home/mironov/letsencrypt/:/etc/letsencrypt/
-      - www/hugo:/var/www/hugo/
-      - sites-available/default:/etc/nginx/sites-available/default
-      - nginx.conf:/etc/nginx/nginx.conf
       - /var/log/nginx/log/:/var/log/nginx/log/
+#      - www/hugo:/var/www/hugo/   Those pushed by Jenkins.
+#      - sites-available/default:/etc/nginx/sites-available/default
+#      - nginx.conf:/etc/nginx/nginx.conf
