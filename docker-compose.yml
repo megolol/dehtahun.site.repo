@@ -9,7 +9,7 @@ services:
       - 443:443
     volumes:
       - /home/mironov/letsencrypt/:/etc/letsencrypt/
-      - /home/mironov/dev_repo/www/hugo:/var/www/hugo/
-      - /home/mironov/dev_repo/sites-available/default:/etc/nginx/sites-available/default
-      - /home/mironov/dev_repo/nginx.conf:/etc/nginx/nginx.conf
+      - www/hugo:/var/www/hugo/
+      - sites-available/default:/etc/nginx/sites-available/default
+      - nginx.conf:/etc/nginx/nginx.conf
       - /var/log/nginx/log/:/var/log/nginx/log/
